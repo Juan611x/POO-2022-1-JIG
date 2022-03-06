@@ -33,7 +33,7 @@ void Propietario::setDocumentoDeIdentidad(int DocumentoDeIdentidad){
     this -> DocumentoDeIdentidad = DocumentoDeIdentidad;
 }
 
-string Propietario::getNombre(){
+int Propietario::getDocumentoDeIdentidad(){
     return this -> DocumentoDeIdentidad;
 }
 
@@ -42,4 +42,19 @@ Propietario::Propietario(string Nombre, string Email, int Telefono, int Document
     this -> Email = Email;
     this -> Telefono = Telefono;
     this -> DocumentoDeIdentidad = DocumentoDeIdentidad;
+}
+
+void Propietario::ImprimitInformacionP(){
+    cout<<"Nombre: "<< this -> Nombre << "\n";
+    cout<<"Email: "<< this -> Email << "\n" ;
+    cout<<"Telefono: "<< this -> Telefono << "\n";
+    cout<<"Documento de Identidad: "<< this -> DocumentoDeIdentidad << "\n";
+    cout<<"\nMascota: \n";
+    for(int i = 0; i < vMascotas.size(); i++){
+        cout<< vMascotas[i].getNombre();
+    }
+}
+
+void Propietario::agregarMascota(Mascota mascota){
+    vMascotas.push_back(mascota);
 }
