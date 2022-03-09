@@ -1,3 +1,6 @@
+#ifndef MASCOTA_H
+#define MASCOTA_H
+
 #include<iostream>
 #include<vector>
 
@@ -11,25 +14,37 @@ class Mascota{
         string FechaDefuncion;
         int Identificacion;
         string Nobre;
-        int TipoDeSangre;
+        string TipoDeSangre;
         int Edad;
         float Peso;
-        int Tipo;
+        string Tipo;
         string Raza;
-        vector<Propietario> dueños;
+        vector<Propietario> duenos;
     public:
-        void ImprimitInformacionM();
-        Mascota(int Tipo, string Raza, float Peso, int Eedad, int TipoDeSangre, string Nombre, int Identificacion, bool Estatus);
-        Mascota(int Tipo, string Raza, float Peso, int Eedad, int TipoDeSangre, string Nombre, int Identificacion, bool Estatus, string FechaDefuncion);
+        void ImprimitInformacionM(Administracion administracion);
+        Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus);
+        Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus, string FechaDefuncion);
         bool getEstatus();
         string getFechaDefuncion();
         int getIdentificacion();
         string getNombre();
-        int getTipoDeSangre();
+        string getTipoDeSangre();
         int getEdad();
         float getPeso();
-        int getTipo();
+        string getTipo();
         string getRaza();
-        void agregarDueño(Propietario dueño);
+        void agregarDueno(Propietario dueno);
+
+        void setNombre(string nombre);
+        void setTipo(string tipo);
+        void setRaza(string raza);
+        void setPeso(float peso);
+        void setEdad(int edad);
+        void setTipoSangre(string tipoSangre);
+        void setIdentificacion(int identificacion);
+        void setStatus(bool status);
+        void setFechaDefuncion(string fecha);
 
 };
+
+#endif
