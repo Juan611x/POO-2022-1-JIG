@@ -1,9 +1,5 @@
-#include<iostream>
-#include"Propietario.h"
-
-using std::cout;
-using std::cin;
-
+#include <iostream>
+#include "Propietario.h"
 
 void Propietario::setNombre(string Nombre){
     this -> Nombre = Nombre;
@@ -44,30 +40,20 @@ Propietario::Propietario(string Nombre, string Email, int Telefono, int Document
     this -> documentoDeIdentidad = documentoDeIdentidad;
 }
 
-void Propietario::ImprimitInformacionP(Administracion administracion){
+Propietario::Propietario():Nombre(),Email(),Telefono(),documentoDeIdentidad(){
+
+}
+
+void Propietario::ImprimitInformacionP(){
     cout<<"Nombre: "<< this -> Nombre << "\n";
     cout<<"Email: "<< this -> Email << "\n" ;
     cout<<"Telefono: "<< this -> Telefono << "\n";
     cout<<"Documento de Identidad: "<< this -> documentoDeIdentidad << "\n";
-    cout<<"\nMascota: \n";
-    for(int i = 0; i < vMascotas.size(); i++){
-        cout<< vMascotas[i].getNombre()<<"\n";
-    }
-
-    int opc2;
-    cout<<"1. agregar dueño\n0. salit\n";
-    cin>>opc2;
-    if(opc2 == 1){
-        int op;
-        administracion.Listar2M(administracion);
-        cout<<"Digita un valor";
-        cin>>op;
-        agregarMascota(administracion.getMascota(op));
-    }else{
-
-    }
-}
-
-void Propietario::agregarMascota(Mascota mascota){
-    vMascotas.push_back(mascota);
+    /*
+    cout<<"Mascotas:\n";
+    for(int i = 0; i < enlaces.size(); i++){
+        if(enlaces[i].getPropietario().getDocumentoDeIdentidad() == this -> documentoDeIdentidad){
+            cout<<enlaces[i].getMascota().getNombre();
+        }
+    }*/
 }

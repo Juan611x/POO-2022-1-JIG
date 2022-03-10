@@ -1,13 +1,15 @@
 all: compilar
-compilar: propietario mascota administracion main
-	g++ -o Salida Propietario.o Mascota.o Main.o administracion.o
-propietario: Propietario.cpp Propietario.h 
+compilar: propietario mascota administracion enlace main
+	g++ -o Salida Main.o Administracion.o Enlace.o Propietario.o Mascota.o  
+propietario: Propietario.cpp Propietario.h
 	g++ -c Propietario.cpp
-mascota: Mascota.cpp Mascota.h Administracion.h
+mascota: Mascota.cpp Mascota.h
 	g++ -c Mascota.cpp
-administracion: Administracion.cpp Administracion.h 
+administracion: Administracion.cpp Administracion.h Enlace.h 
 	g++ -c Administracion.cpp
-main: Main.cpp Mascota.cpp Propietario.cpp Administracion.cpp
+enlace: Enlace.cpp Enlace.h Propietario.h Mascota.h
+	g++ -c Enlace.cpp
+main: Main.cpp Administracion.h
 	g++ -c Main.cpp
 clean:
 	@echo "Cleaning copilation..."

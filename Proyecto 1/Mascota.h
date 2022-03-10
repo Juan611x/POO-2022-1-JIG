@@ -1,10 +1,10 @@
 #ifndef MASCOTA_H
 #define MASCOTA_H
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
-#include"Propietario.h"
+
 
 using namespace std;
 
@@ -19,11 +19,10 @@ class Mascota{
         float Peso;
         string Tipo;
         string Raza;
-        vector<Propietario> duenos;
     public:
-        void ImprimitInformacionM(Administracion administracion);
+        void ImprimitInformacionM();
         Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus);
-        Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus, string FechaDefuncion);
+        Mascota();
         bool getEstatus();
         string getFechaDefuncion();
         int getIdentificacion();
@@ -33,8 +32,6 @@ class Mascota{
         float getPeso();
         string getTipo();
         string getRaza();
-        void agregarDueno(Propietario dueno);
-
         void setNombre(string nombre);
         void setTipo(string tipo);
         void setRaza(string raza);

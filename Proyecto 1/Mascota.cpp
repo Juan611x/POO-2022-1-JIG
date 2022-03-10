@@ -1,9 +1,10 @@
-#include<iostream>
-
-#include"Mascota.h"
-#include"Administracion.h"
+#include <iostream>
+#include "Mascota.h"
 
 
+Mascota::Mascota():Tipo(),Raza(),Peso(),Edad(),TipoDeSangre(),Nobre(),Identificacion(),Estatus(),FechaDefuncion(){
+
+}
 
 Mascota::Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus){
     this -> Tipo = Tipo;
@@ -15,17 +16,30 @@ Mascota::Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeS
     this -> Identificacion = Identificacion;
     this -> Estatus = Estatus;
 }
-Mascota::Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus, string FechaDefuncion){
-    this -> Tipo = Tipo;
-    this -> Raza = Raza;
-    this -> Peso = Peso;
-    this -> Edad = Edad;
-    this -> TipoDeSangre = TipoDeSangre;
-    this -> Nobre = Nobre;
-    this -> Identificacion = Identificacion;
-    this -> Estatus = Estatus;
-    this -> FechaDefuncion = FechaDefuncion;
+
+void Mascota::ImprimitInformacionM(){
+    cout<<"Tipo: "<< this -> Tipo <<"/n";
+    cout<<"Raza: "<< this -> Raza <<"/n";
+    cout<<"Nombre: "<< this -> Nobre <<"/n";
+    cout<<"Peso: "<< this -> Peso <<"\n";
+    cout<<"Edad: "<< this -> Edad <<"/n";
+    cout<<"Tipo de sangre: " << this -> TipoDeSangre << "\n";
+    cout<<"Identidficacion: " << this -> Identificacion <<"\n";
+    if(this -> Estatus){
+        cout<<"Estatus: Vivo"<< "\n";
+    }else{
+        cout<<"Estatus: Muerto"<< "\n";
+        cout<<"Fecha defuncion: "<< this -> FechaDefuncion << "\n";
+    }
+    /*
+    cout<<"Popietarios";
+    for(int i = 0; i < enlaces.size(); i++){
+        if(enlaces[i].getMascota().getIdentificacion() == this -> Identificacion){
+            cout<<enlaces[i].getPropietario().getNombre();
+        }
+    }*/
 }
+
 
 string Mascota::getTipo(){
     return this -> Tipo;
@@ -53,53 +67,6 @@ bool Mascota::getEstatus(){
 }
 string Mascota::getFechaDefuncion(){
     return this -> FechaDefuncion;
-}
-
-
-void Mascota::agregarDueno(Propietario dueno){
-    duenos.push_back(dueno);
-}
-
-
-void Mascota::ImprimitInformacionM(Administracion administracion){
-    cout<<"Tipo: "<< this -> Tipo <<"/n";
-    cout<<"Raza: "<< this -> Raza <<"/n";
-    cout<<"Nombre: "<< this -> Nobre <<"/n";
-    cout<<"Peso: "<< this -> Peso <<"\n";
-    cout<<"Edad: "<< this -> Edad <<"/n";
-    cout<<"Tipo de sangre: " << this -> TipoDeSangre << "\n";
-    cout<<"Identidficacion: " << this -> Identificacion <<"\n";
-    if(this -> Estatus){
-        cout<<"Estatus: Vivo"<< "\n";
-    }else{
-        cout<<"Estatus: Muerto"<< "\n";
-        cout<<"Fecha defuncion: "<< this -> FechaDefuncion << "\n";
-    }
-
-    cout<<"Dueños";
-    for(int i = 0; i < duenos.size(); i++){
-        cout<< duenos[i].getNombre()<<"\n";
-    }
-    int opc2;
-    cout<<"1. agregar dueño\n2. agregar Fecha de defuncion\n0. salit\n";
-    cin>>opc2;
-    if(opc2 == 1){
-        int op;
-        administracion.Listar2P(administracion);
-        cout<<"Digita un valor";
-        cin>>op;
-        agregarDueno(administracion.getPropietario(op));
-    }else if (opc2 == 2)
-    {
-        this -> Estatus == false;
-        string fecha;
-        cout<<"Digite la fecha de defuncion";
-        cin>>fecha;
-        this -> FechaDefuncion = fecha;
-    }else{
-
-    }
-    
 }
 
 void Mascota::setEdad(int edad){

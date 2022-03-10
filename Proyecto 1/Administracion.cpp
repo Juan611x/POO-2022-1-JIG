@@ -1,9 +1,8 @@
-
 #include <iostream>
 #include "Administracion.h"
 
 
-void Administracion::AgregarM(int identificacion){
+void Administracion::AgregarM(int ident){
     string fechaDefuncion;
     int identificacion;
     string nombre;
@@ -30,7 +29,7 @@ void Administracion::AgregarM(int identificacion){
 
 
     Mascota mascota(tipo, raza, peso, edad, tipoDeSangre, nombre, identificacion, true);
-    Mascotas.insert(make_pair(identificacion, mascota));
+    Mascotas.insert(make_pair(ident, mascota));
 }
 
 void Administracion::EditarM(int identificacion){
@@ -72,26 +71,22 @@ void Administracion::EliminarP(int identificacion){
     Propietarios.erase(identificacion);
 }
 
-void Administracion::ListarP(Administracion administracion){
-    int opcion;
+void Administracion::ListarP(int ver){
+    
     for(it = Propietarios.begin(); it != Propietarios.end(); it++ ){
         cout<< it ->first << ". "<<it -> second.getNombre();
     }
-    cout<<"0. regresar";
-    cout<<"Ingrese un valor...";
-    cin>>opcion;
-    if(opcion = 0){
-
-    }else{
-        Propietarios[opcion].ImprimitInformacionP(administracion);
+    if(ver == 1){
+        int opcion;
+        cout<<"0. regresar";
+        cout<<"Ingrese un valor...";
+        cin>>opcion;
+        if(opcion != 0){
+            Propietarios.at(opcion).ImprimitInformacionP();
+            mostrarMascotas(Propietarios.at(opcion));
+        }
     }
-}
 
-void Administracion::Listar2P(Administracion administracion){
-    int opcion;
-    for(it = Propietarios.begin(); it != Propietarios.end(); it++ ){
-        cout<< it ->first << ". "<<it -> second.getNombre();
-    }
 }
 
 void Administracion::AgregarP(int identificacion){
@@ -135,27 +130,21 @@ void Administracion::EliminarM(int identificacion){
 
 }
 
-void Administracion::ListarM(Administracion administracion){
+void Administracion::ListarM(int ver){
     int opcion;
     for(itm = Mascotas.begin(); itm != Mascotas.end(); itm++ ){
         cout<< itm ->first << ". "<<itm -> second.getNombre();
     }
-    cout<<"0. regresar";
-    cout<<"Ingrese un valor...";
-    cin>>opcion;
-    if(opcion = 0){
-
-    }else{
-        Mascotas[opcion].ImprimitInformacionM(administracion);
+    if(ver == 1){
+        cout<<"0. regresar";
+        cout<<"Ingrese un valor...";
+        cin>>opcion;
+        if(opcion = 0){
+            Mascotas.at(opcion).ImprimitInformacionM();
+            mostrarPropietario(Mascotas.at(opcion));
+        } 
     }
-}
-
-
-void Administracion::Listar2M(Administracion administracion){
-    int opcion;
-    for(itm = Mascotas.begin(); itm != Mascotas.end(); itm++ ){
-        cout<< itm ->first << ". "<<itm -> second.getNombre();
-    }
+    
 }
 
 Propietario Administracion::getPropietario(int identificaion){
@@ -164,4 +153,27 @@ Propietario Administracion::getPropietario(int identificaion){
 
 Mascota Administracion::getMascota(int identifiacion){
     return this -> Mascotas.at(identifiacion);
+}
+
+void Administracion::enlazarMascotaPropietarios(Mascota mascota, Propietario propietario){
+    Enlace enlace(propietario, mascota);
+    enlaces.push_back(enlace);
+}
+
+void Administracion::mostrarMascotas(Propietario propietario){
+    cout<<"Mascotas:\n";
+    for(int i = 0; i < enlaces.size(); i++){
+        if(enlaces[i].getPropietario().getDocumentoDeIdentidad() == propietario.getDocumentoDeIdentidad()){
+            cout<<enlaces[i].getMascota().getNombre();
+        }
+    }
+}
+
+void Administracion::mostrarPropietario(Mascota mascota){
+    cout<<"Popietarios";
+    for(int i = 0; i < enlaces.size(); i++){
+        if(enlaces[i].getMascota().getIdentificacion() == mascota.getIdentificacion()){
+            cout<<enlaces[i].getPropietario().getNombre();
+        }
+    }
 }

@@ -1,10 +1,9 @@
 #ifndef PROPIETARIO_H
 #define PROPIETARIO_H
 
-#include<iostream>
-#include<vector>
-#include"Mascota.h"
-#include"Administracion.h"
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
 
@@ -14,10 +13,11 @@ class Propietario{
         string Email;
         int Telefono;
         int documentoDeIdentidad;
-        vector<Mascota> vMascotas;
 
     public:
-        void ImprimitInformacionP(Administracion administracion);
+        Propietario(string Nombre, string Email, int Telefono, int Documento);
+        Propietario();
+        void ImprimitInformacionP();
         void setNombre(string Nombre);
         string getNombre();
         void setEmail(string Email);
@@ -26,8 +26,7 @@ class Propietario{
         int getTelefono();
         void setDocumentoDeIdentidad(int DocumentoDeIdentidad);
         int getDocumentoDeIdentidad();
-        void agregarMascota(Mascota mascota);
-        Propietario(string Nombre, string Email, int Telefono, int Documento);
+        
 };
 
 #endif
