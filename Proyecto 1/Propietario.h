@@ -9,9 +9,9 @@ using namespace std;
 
 class Propietario{
     private:
-        string Nombre;
-        string Email;
-        int Telefono;
+        string nombre;
+        string email;
+        int telefono;
         int documentoDeIdentidad;
 
     public:

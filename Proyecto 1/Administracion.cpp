@@ -2,7 +2,31 @@
 #include "Administracion.h"
 
 
-void Administracion::AgregarM(int ident){
+
+void Administracion::enlazarMascotaPropietarios(Mascota mascota, Propietario propietario){
+    Enlace enlace(propietario, mascota);
+    enlaces.push_back(enlace);
+}
+
+void Administracion::mostrarMascotas(Propietario propietario){
+    cout<<"Mascotas:\n";
+    for(int i = 0; i < enlaces.size(); i++){
+        if(enlaces[i].getPropietario().getDocumentoDeIdentidad() == propietario.getDocumentoDeIdentidad()){
+            cout<<enlaces[i].getMascota().getNombre();
+        }
+    }
+}
+
+void Administracion::mostrarPropietario(Mascota mascota){
+    cout<<"Popietarios";
+    for(int i = 0; i < enlaces.size(); i++){
+        if(enlaces[i].getMascota().getIdentificacion() == mascota.getIdentificacion()){
+            cout<<enlaces[i].getPropietario().getNombre();
+        }
+    }
+}
+
+void Administracion::AgregarMascota(int ident){
     string fechaDefuncion;
     int identificacion;
     string nombre;
@@ -29,10 +53,10 @@ void Administracion::AgregarM(int ident){
 
 
     Mascota mascota(tipo, raza, peso, edad, tipoDeSangre, nombre, identificacion, true);
-    Mascotas.insert(make_pair(ident, mascota));
+    mascotas.insert(make_pair(ident, mascota));
 }
 
-void Administracion::EditarM(int identificacion){
+void Administracion::EditarMascota(int identificacion){
     string fechaDefuncion;
     int Nidentificacion;
     string nombre;
@@ -57,23 +81,23 @@ void Administracion::EditarM(int identificacion){
     cout<<"Digite la identificaion: ";
     cin>>Nidentificacion;
 
-    Mascotas[identificacion].setEdad(edad);
-    Mascotas[identificacion].setNombre(nombre);
-    Mascotas[identificacion].setIdentificacion(Nidentificacion);
-    Mascotas[identificacion].setRaza(raza);
-    Mascotas[identificacion].setTipo(tipo);
-    Mascotas[identificacion].setPeso(peso);
-    Mascotas[identificacion].setTipoSangre(tipoDeSangre);
+    mascotas[identificacion].setEdad(edad);
+    mascotas[identificacion].setNombre(nombre);
+    mascotas[identificacion].setIdentificacion(Nidentificacion);
+    mascotas[identificacion].setRaza(raza);
+    mascotas[identificacion].setTipo(tipo);
+    mascotas[identificacion].setPeso(peso);
+    mascotas[identificacion].setTipoSangre(tipoDeSangre);
 
 }
 
-void Administracion::EliminarP(int identificacion){
-    Propietarios.erase(identificacion);
+void Administracion::EliminarPropietario(int identificacion){
+    propietarios.erase(identificacion);
 }
 
-void Administracion::ListarP(int ver){
+void Administracion::ListarPropietario(int ver){
     
-    for(it = Propietarios.begin(); it != Propietarios.end(); it++ ){
+    for(it = propietarios.begin(); it != propietarios.end(); it++ ){
         cout<< it ->first << ". "<<it -> second.getNombre();
     }
     if(ver == 1){
@@ -82,14 +106,14 @@ void Administracion::ListarP(int ver){
         cout<<"Ingrese un valor...";
         cin>>opcion;
         if(opcion != 0){
-            Propietarios.at(opcion).ImprimitInformacionP();
-            mostrarMascotas(Propietarios.at(opcion));
+            propietarios.at(opcion).ImprimitInformacionP();
+            mostrarMascotas(propietarios.at(opcion));
         }
     }
 
 }
 
-void Administracion::AgregarP(int identificacion){
+void Administracion::AgregarPropietario(int identificacion){
     string nombre;
     string email;
     int telefono;
@@ -103,10 +127,10 @@ void Administracion::AgregarP(int identificacion){
     cout<<"Digite el Documento de Identidad: ";
     cin>>documento;
     Propietario propietario(nombre, email, telefono, documento);
-    Propietarios.insert(make_pair(identificacion, propietario));
+    propietarios.insert(make_pair(identificacion, propietario));
 }
 
-void Administracion::EditarP(int identificacion){
+void Administracion::EditarPropietario(int identificacion){
     string nombre;
     string email;
     int telefono;
@@ -119,20 +143,20 @@ void Administracion::EditarP(int identificacion){
     cin>>telefono;
     cout<<"Digite el Documento de Identidad: ";
     cin>>documento;
-    Propietarios[identificacion].setNombre(nombre);
-    Propietarios[identificacion].setEmail(email);
-    Propietarios[identificacion].setTelefono(telefono);
-    Propietarios[identificacion].setDocumentoDeIdentidad(documento);
+    propietarios[identificacion].setNombre(nombre);
+    propietarios[identificacion].setEmail(email);
+    propietarios[identificacion].setTelefono(telefono);
+    propietarios[identificacion].setDocumentoDeIdentidad(documento);
 }
 
-void Administracion::EliminarM(int identificacion){
-    Mascotas.erase(identificacion);
+void Administracion::EliminarMascota(int identificacion){
+    mascotas.erase(identificacion);
 
 }
 
-void Administracion::ListarM(int ver){
+void Administracion::ListarMascota(int ver){
     int opcion;
-    for(itm = Mascotas.begin(); itm != Mascotas.end(); itm++ ){
+    for(itm = mascotas.begin(); itm != mascotas.end(); itm++ ){
         cout<< itm ->first << ". "<<itm -> second.getNombre();
     }
     if(ver == 1){
@@ -140,40 +164,18 @@ void Administracion::ListarM(int ver){
         cout<<"Ingrese un valor...";
         cin>>opcion;
         if(opcion = 0){
-            Mascotas.at(opcion).ImprimitInformacionM();
-            mostrarPropietario(Mascotas.at(opcion));
+            mascotas.at(opcion).imprimitInformacionM();
+            mostrarPropietario(mascotas.at(opcion));
         } 
     }
     
 }
 
 Propietario Administracion::getPropietario(int identificaion){
-    return this -> Propietarios.at(identificaion);
+    return this -> propietarios.at(identificaion);
 }
 
 Mascota Administracion::getMascota(int identifiacion){
-    return this -> Mascotas.at(identifiacion);
+    return this -> mascotas.at(identifiacion);
 }
 
-void Administracion::enlazarMascotaPropietarios(Mascota mascota, Propietario propietario){
-    Enlace enlace(propietario, mascota);
-    enlaces.push_back(enlace);
-}
-
-void Administracion::mostrarMascotas(Propietario propietario){
-    cout<<"Mascotas:\n";
-    for(int i = 0; i < enlaces.size(); i++){
-        if(enlaces[i].getPropietario().getDocumentoDeIdentidad() == propietario.getDocumentoDeIdentidad()){
-            cout<<enlaces[i].getMascota().getNombre();
-        }
-    }
-}
-
-void Administracion::mostrarPropietario(Mascota mascota){
-    cout<<"Popietarios";
-    for(int i = 0; i < enlaces.size(); i++){
-        if(enlaces[i].getMascota().getIdentificacion() == mascota.getIdentificacion()){
-            cout<<enlaces[i].getPropietario().getNombre();
-        }
-    }
-}

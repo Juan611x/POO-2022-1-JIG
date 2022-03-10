@@ -10,19 +10,19 @@ using namespace std;
 
 class Mascota{
     private:
-        bool Estatus;
-        string FechaDefuncion;
-        int Identificacion;
-        string Nobre;
-        string TipoDeSangre;
-        int Edad;
-        float Peso;
-        string Tipo;
-        string Raza;
+        bool estatus;
+        string fechaDefuncion;
+        int identificacion;
+        string nobre;
+        string tipoDeSangre;
+        int edad;
+        float peso;
+        string tipo;
+        string raza;
     public:
-        void ImprimitInformacionM();
         Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus);
         Mascota();
+        void imprimitInformacionM();
         bool getEstatus();
         string getFechaDefuncion();
         int getIdentificacion();

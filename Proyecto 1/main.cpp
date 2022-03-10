@@ -24,49 +24,49 @@ int main(){
 
         switch (opcion){
         case 1:
-            Administracion.AgregarM(identificacionM);
+            Administracion.AgregarMascota(identificacionM);
             identificacionM ++;
             break;
         case 2:
             //int opc;
             cout<<"Digite un valor";
             cin>>opc;
-            Administracion.EliminarM(opc);
+            Administracion.EliminarMascota(opc);
             break;
         case 3:
-            Administracion.ListarM(1);
+            Administracion.ListarMascota(1);
             break;
         case 4:
             //int opc;
             cout<<"Digite un valor";
             cin>>opc;
-            Administracion.EditarM(opc);
+            Administracion.EditarMascota(opc);
             break;
         case 5:
-            Administracion.AgregarP(identificacionP);
+            Administracion.AgregarPropietario(identificacionP);
             identificacionP ++;
             break;
         case 6:
             //int opc;
             cout<<"Digite un valor";
             cin>>opc;
-            Administracion.EliminarP(opc);
+            Administracion.EliminarPropietario(opc);
             break;
         case 7:
-            Administracion.ListarP(1);
+            Administracion.ListarPropietario(1);
             break;
         case 8:
             //int opc;
             cout<<"Digite un valor";
             cin>>opc;
-            Administracion.EditarP(opc);
+            Administracion.EditarPropietario(opc);
             break;
         case 9:
             
-            Administracion.ListarP(0);
+            Administracion.ListarPropietario(0);
             cout<<"Digita en valor...";
             cin>>idP;
-            Administracion.ListarM(0);
+            Administracion.ListarMascota(0);
             cout<<"Digita en valor...";
             cin>>idM;
             Administracion.enlazarMascotaPropietarios(Administracion.getMascota(idM),Administracion.getPropietario(idP));

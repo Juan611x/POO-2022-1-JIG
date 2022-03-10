@@ -2,34 +2,34 @@
 #include "Mascota.h"
 
 
-Mascota::Mascota():Tipo(),Raza(),Peso(),Edad(),TipoDeSangre(),Nobre(),Identificacion(),Estatus(),FechaDefuncion(){
+Mascota::Mascota():tipo(),raza(),peso(),edad(),tipoDeSangre(),nobre(),identificacion(),estatus(),fechaDefuncion(){
 
 }
 
 Mascota::Mascota(string Tipo, string Raza, float Peso, int Eedad, string TipoDeSangre, string Nombre, int Identificacion, bool Estatus){
-    this -> Tipo = Tipo;
-    this -> Raza = Raza;
-    this -> Peso = Peso;
-    this -> Edad = Edad;
-    this -> TipoDeSangre = TipoDeSangre;
-    this -> Nobre = Nobre;
-    this -> Identificacion = Identificacion;
-    this -> Estatus = Estatus;
+    this -> tipo = Tipo;
+    this -> raza = Raza;
+    this -> peso = Peso;
+    this -> edad = edad;
+    this -> tipoDeSangre = TipoDeSangre;
+    this -> nobre = nobre;
+    this -> identificacion = Identificacion;
+    this -> estatus = Estatus;
 }
 
-void Mascota::ImprimitInformacionM(){
-    cout<<"Tipo: "<< this -> Tipo <<"/n";
-    cout<<"Raza: "<< this -> Raza <<"/n";
-    cout<<"Nombre: "<< this -> Nobre <<"/n";
-    cout<<"Peso: "<< this -> Peso <<"\n";
-    cout<<"Edad: "<< this -> Edad <<"/n";
-    cout<<"Tipo de sangre: " << this -> TipoDeSangre << "\n";
-    cout<<"Identidficacion: " << this -> Identificacion <<"\n";
-    if(this -> Estatus){
+void Mascota::imprimitInformacionM(){
+    cout<<"Tipo: "<< this -> tipo <<"/n";
+    cout<<"Raza: "<< this -> raza <<"/n";
+    cout<<"Nombre: "<< this -> nobre <<"/n";
+    cout<<"Peso: "<< this -> peso <<"\n";
+    cout<<"Edad: "<< this -> edad <<"/n";
+    cout<<"Tipo de sangre: " << this -> tipoDeSangre << "\n";
+    cout<<"Identidficacion: " << this -> identificacion <<"\n";
+    if(this -> estatus){
         cout<<"Estatus: Vivo"<< "\n";
     }else{
         cout<<"Estatus: Muerto"<< "\n";
-        cout<<"Fecha defuncion: "<< this -> FechaDefuncion << "\n";
+        cout<<"Fecha defuncion: "<< this -> fechaDefuncion << "\n";
     }
     /*
     cout<<"Popietarios";
@@ -42,61 +42,61 @@ void Mascota::ImprimitInformacionM(){
 
 
 string Mascota::getTipo(){
-    return this -> Tipo;
+    return this -> tipo;
 }
 string Mascota::getRaza(){
-    return this -> Raza;
+    return this -> raza;
 }
 float Mascota::getPeso(){
-    return this -> Peso;
+    return this -> peso;
 }
 int Mascota::getEdad(){
-    return this -> Edad;
+    return this -> edad;
 }
 string Mascota::getTipoDeSangre(){
-    return this -> TipoDeSangre;
+    return this -> tipoDeSangre;
 }
 string Mascota::getNombre(){
-    return this -> Nobre;
+    return this -> nobre;
 }
 int Mascota::getIdentificacion(){
-    return this -> Identificacion;
+    return this -> identificacion;
 }
 bool Mascota::getEstatus(){
-    return this -> Estatus;
+    return this -> estatus;
 }
 string Mascota::getFechaDefuncion(){
-    return this -> FechaDefuncion;
+    return this -> fechaDefuncion;
 }
 
 void Mascota::setEdad(int edad){
-    this -> Edad = edad;
+    this -> edad = edad;
 }
 
 void Mascota::setFechaDefuncion(string fecha){
-    this -> FechaDefuncion = fecha;
+    this -> fechaDefuncion = fecha;
 }
 
 void Mascota::setIdentificacion(int identificacion){
-    this -> Identificacion = identificacion;
+    this -> identificacion = identificacion;
 }
 
 void Mascota::setNombre(string nombre){
-    this -> Nobre = nombre;
+    this -> nobre = nombre;
 }
 
 void Mascota::setPeso(float peso){
-    this -> Peso = Peso;
+    this -> peso = peso;
 }
 
 void Mascota::setRaza(string raza){
-    this -> Raza = raza;
+    this -> raza = raza;
 }
 
 void Mascota::setStatus(bool status){
-    this -> Estatus = status;
+    this -> estatus = status;
     string fecha;
-    if(Estatus == false){
+    if(estatus == false){
         cout<<"digite una fecha de defuncion";
         cin>>fecha;
         this -> setFechaDefuncion(fecha);
@@ -104,9 +104,9 @@ void Mascota::setStatus(bool status){
 }
 
 void Mascota::setTipo(string tipo){
-    this -> Tipo = tipo;
+    this -> tipo = tipo;
 }
 
 void Mascota::setTipoSangre(string fecha){
-    this -> FechaDefuncion = fecha;
+    this -> fechaDefuncion = fecha;
 }
