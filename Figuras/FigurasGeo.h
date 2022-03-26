@@ -21,3 +21,5 @@ class FigurasGeo{
         float getPerimetro();*/
     
 };
+
+#endif

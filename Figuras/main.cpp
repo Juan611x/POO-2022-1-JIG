@@ -33,7 +33,7 @@ void main(){
                 cout<<"Por favor digite el largo de sus lados \n";
                 cin>>lado;
                 Cuadrado figura(lado);
-                Administracion.agregar(figura);
+                Administracion.agregar( &figura );
                 break;
             case 2:
                 cout<<"Por favor digite el largo de sus base \n";
@@ -41,13 +41,13 @@ void main(){
                 cout<<"Por favor digite el largo de su altura \n";
                 cin>>altura;
                 Rectangulo figura(base , altura);
-                Administracion.agregar(figura);
+                Administracion.agregar( &figura );
                 break;
             case 3:
                 cout<<"Por favor digite el largo de su radio \n";
                 cin>>radio;
                 Circulo figura(radio);
-                Administracion.agregar(figura);
+                Administracion.agregar( &figura );
                 break;
             
             }

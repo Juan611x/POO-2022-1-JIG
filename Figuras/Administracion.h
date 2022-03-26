@@ -14,11 +14,14 @@ using std::vector;
 
 class Administracion{
     private:   
-        vector<FigurasGeo> figuras;
+        vector<FigurasGeo*> figuras;
     public:
-        void agregar(FigurasGeo figura);
+        Administracion();
+        ~Administracion();
+        void agregar(FigurasGeo * figura);
         void listar();
         void sumarAREAS();
     
 };
 
+#endif

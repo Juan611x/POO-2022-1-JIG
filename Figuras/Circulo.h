@@ -11,6 +11,7 @@ class Circulo : public FigurasGeo{
     private:
         int radio;
     public:
+        Circulo();
         Circulo(int radio);
         float calcularArea();
         float calcularPerimetro();

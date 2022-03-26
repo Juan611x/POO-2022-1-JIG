@@ -13,9 +13,12 @@ class Rectangulo : public FigurasGeo{
         int base;
         int altura;
     public:
+        Rectangulo();
         Rectangulo(int base, int altura);
         float calcularArea();
         float calcularPerimetro();
         void dibujarFigura();
     
 };
+
+#endif;

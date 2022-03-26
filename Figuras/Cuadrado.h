@@ -11,9 +11,11 @@ class Cuadrado : public FigurasGeo{
     private:
         int lado;
     public:
+        Cuadrado();
         Cuadrado(int lado);
         float calcularArea();
         float calcularPerimetro();
         void dibujarFigura();
     
 };
+#endif
