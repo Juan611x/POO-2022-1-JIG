@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void main(){
+int main(){
     Administracion Administracion;
     int opc;
     int opcf;
@@ -32,22 +32,22 @@ void main(){
             case 1:
                 cout<<"Por favor digite el largo de sus lados \n";
                 cin>>lado;
-                Cuadrado figura(lado);
-                Administracion.agregar( &figura );
+                //Cuadrado figura(lado);
+                Administracion.agregar( /*&figura*/ new Cuadrado(lado)  );
                 break;
             case 2:
                 cout<<"Por favor digite el largo de sus base \n";
                 cin>>base;
                 cout<<"Por favor digite el largo de su altura \n";
                 cin>>altura;
-                Rectangulo figura(base , altura);
-                Administracion.agregar( &figura );
+                //Rectangulo figura(base , altura);
+                Administracion.agregar( /*&figura*/ new Rectangulo(base, altura) );
                 break;
             case 3:
                 cout<<"Por favor digite el largo de su radio \n";
                 cin>>radio;
-                Circulo figura(radio);
-                Administracion.agregar( &figura );
+                //Circulo figura(radio);
+                Administracion.agregar( /*&figura*/ new Circulo(radio) );
                 break;
             
             }
@@ -67,4 +67,5 @@ void main(){
             break;
         }
     }while (opc != 0);
+    return 0;
 }
