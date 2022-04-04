@@ -3,6 +3,17 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Proyecto 1" targetName="enlace" />
+      <config projectName="Proyecto 1" targetName="mascota" />
+      <config projectName="Proyecto 1" targetName="main" />
+      <config projectName="Proyecto 1" targetName="compilar" />
+      <config projectName="Proyecto 1" targetName="all" />
+      <config projectName="Proyecto 1" targetName="administracion" />
+      <config projectName="Proyecto 1" targetName="propietario" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
@@ -10,14 +21,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cfb232a-0f34-48eb-a528-ae2e5850b34e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Administracion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Administracion.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administracion.h" beforeDir="false" afterPath="$PROJECT_DIR$/Administracion.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mascota.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Mascota.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mascota.h" beforeDir="false" afterPath="$PROJECT_DIR$/Mascota.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Propietario.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Propietario.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Propietario.h" beforeDir="false" afterPath="$PROJECT_DIR$/Propietario.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Figuras/Rectangulo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Figuras/Rectangulo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Figuras/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Figuras/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Administracion.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enlace.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mascota.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Propietario.o" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +39,35 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MakefileLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Proyecto 1" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="Proyecto 1" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="projectSyncType">
       <map>
         <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
@@ -57,6 +94,57 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager" selected="Makefile Application.administracion">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="administracion" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="administracion" CONFIG_NAME="administracion" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="all" CONFIG_NAME="all" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="compilar" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="compilar" CONFIG_NAME="compilar" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="enlace" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="enlace" CONFIG_NAME="enlace" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="main" CONFIG_NAME="main" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mascota" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="mascota" CONFIG_NAME="mascota" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="propietario" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="propietario" CONFIG_NAME="propietario" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Makefile Application.administracion" />
+      <item itemvalue="Makefile Application.all" />
+      <item itemvalue="Makefile Application.compilar" />
+      <item itemvalue="Makefile Application.enlace" />
+      <item itemvalue="Makefile Application.main" />
+      <item itemvalue="Makefile Application.mascota" />
+      <item itemvalue="Makefile Application.propietario" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646754376960</updated>
       <workItem from="1646754381688" duration="651000" />
+      <workItem from="1648997922364" duration="243000" />
     </task>
     <servers />
   </component>

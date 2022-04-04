@@ -21,4 +21,4 @@ class Rectangulo : public FigurasGeo{
     
 };
 
-#endif;
+#endif
