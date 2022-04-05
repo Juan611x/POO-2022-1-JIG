@@ -26,7 +26,7 @@ protected:
 public:
     ~Slots() override = default; // Los destructores deben override el constructor padre, si no tiene nada muy especial se puede poner default;
     float jugar(float gonzosApostar) override;
-    virtual void mostrarReglas();
+    virtual void mostrarReglas() override;
 };
 
 
