@@ -35,11 +35,8 @@ float Slots::calcularResultado(float gonzosApostar) {
 }
 
 void Slots::mostrarReglas(){
-    cout<<"Slots es un juego en el que una maquina escoge aleatoriamente 3 simbolos (en algunos
-modelos son 5).\nSi caen los 3 simbolos iguales o alguna combinación especial el jugador
-ganará cierta cantidad, de lo contrario perdera lo apostado.\nEn esta versión de Slots se generaran 3 numeros entre 1 y 7. Si caen los 3 numeros
-iguales el jugador ganará el doble de lo apostado, si consigue una escalera (numeros
-sucesivos sea ascendente o descendente) ganará la mitad de lo apostado.\nSi llega
-a conseguir el triple 7 ganará 7 veces lo apostado. Si no consigue ninguna perderá 
-lo apostado.\n";
+    cout<<"Slots es un juego en el que una maquina escoge aleatoriamente 3 simbolos (en algunos modelos son 5).\n"
+          "Si caen los 3 simbolos iguales o alguna combinación especial el jugador ganará cierta cantidad, de lo contrario perdera lo apostado.En esta versión de Slots se generaran 3 numeros entre 1 y 7. Si caen los 3 numeros iguales el jugador ganará el doble de lo apostado,\n"
+          "si consigue una escalera (numeros sucesivos sea ascendente o descendente) ganará la mitad de lo apostado.\n"
+          "Si llega a conseguir el triple 7 ganará 7 veces lo apostado. Si no consigue ninguna perderá lo apostado.\n";
 }

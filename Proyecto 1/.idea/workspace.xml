@@ -21,15 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cfb232a-0f34-48eb-a528-ae2e5850b34e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Figuras/Rectangulo.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Figuras/Rectangulo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Figuras/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Figuras/makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Administracion.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enlace.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mascota.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Propietario.o" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,14 +84,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2022-1Parcial" />
   </component>
   <component name="RunManager" selected="Makefile Application.administracion">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="administracion" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto 1" TARGET_NAME="administracion" CONFIG_NAME="administracion" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -155,6 +142,7 @@
       <updated>1646754376960</updated>
       <workItem from="1646754381688" duration="651000" />
       <workItem from="1648997922364" duration="243000" />
+      <workItem from="1649179439349" duration="15000" />
     </task>
     <servers />
   </component>
