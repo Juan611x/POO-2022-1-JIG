@@ -1,0 +1,26 @@
+# ninja log v5
+19	7689	6708787643518352	CMakeFiles/casino.dir/main.cpp.obj	e95bcc5744ae8ca5
+329	7855	6708787644326197	CMakeFiles/casino.dir/Model/DosColores.cpp.obj	2f054f1086c1e9af
+342	7686	6708787644326197	CMakeFiles/casino.dir/Model/Slots.cpp.obj	aa42e9976ad80be9
+199	18560	6708783551935219	CMakeFiles/casino.dir/Model/Jugador.cpp.obj	481fc3a8672db8ce
+155	7545	6708787643528327	CMakeFiles/casino.dir/Model/Mayor13.cpp.obj	cf2f9c78724b223
+163	7688	6708787644326197	CMakeFiles/casino.dir/View/View.cpp.obj	816bd8d3a512cfa2
+336	7856	6708787648041110	CMakeFiles/casino.dir/Model/Casino.cpp.obj	d83bbde99176ac39
+3	2437	6708788780555789	build.ninja	6edebbf64573b91d
+3	543	6708788803446019	CMakeFiles/casino.dir/Model/Multiplo.cpp.obj	e550e14034f71644
+543	1413	6708788807617859	casino.exe	b7e8c4a95d0cc70a
+3	625	6708790171716604	CMakeFiles/casino.dir/View/View.cpp.obj	816bd8d3a512cfa2
+626	937	6708790174785697	casino.exe	b7e8c4a95d0cc70a
+3	2327	6708792028464563	CMakeFiles/casino.dir/Model/Multiplo.cpp.obj	e550e14034f71644
+2327	6359	6708792071933308	casino.exe	b7e8c4a95d0cc70a
+3	1361	6708792349360544	CMakeFiles/casino.dir/Model/Casino.cpp.obj	d83bbde99176ac39
+1362	1720	6708792352915840	casino.exe	b7e8c4a95d0cc70a
+98	588	6708793928118047	CMakeFiles/casino.dir/Model/Multiplo.cpp.obj	e550e14034f71644
+48	599	6708794534146788	CMakeFiles/casino.dir/Model/Multiplo.cpp.obj	e550e14034f71644
+3	812	6708794828728749	CMakeFiles/casino.dir/Model/Casino.cpp.obj	d83bbde99176ac39
+812	1113	6708794831708335	casino.exe	b7e8c4a95d0cc70a
+106	1081	6708796463449058	CMakeFiles/casino.dir/Model/Mayor13.cpp.obj	cf2f9c78724b223
+55	1082	6708796463449058	CMakeFiles/casino.dir/Model/Slots.cpp.obj	aa42e9976ad80be9
+3	1178	6708796464446659	CMakeFiles/casino.dir/Model/DosColores.cpp.obj	2f054f1086c1e9af
+112	1179	6708796464446659	CMakeFiles/casino.dir/Model/Multiplo.cpp.obj	e550e14034f71644
+1179	1622	6708796468845489	casino.exe	b7e8c4a95d0cc70a
