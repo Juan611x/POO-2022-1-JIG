@@ -18,7 +18,7 @@ protected:
 public:
     ~Mayor13() override = default; // Los destructores deben ser sobreescritos y deben ser virtual en la clase papa. Si no tiene nada especial se puede marcar como default
     float jugar(float gonzosApostar) override;
-    virtual void mostrarReglas();
+    virtual void mostrarReglas() override;
 };
 
 
