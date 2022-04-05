@@ -23,7 +23,7 @@ public:
 
     ~DosColores() override = default; // Hace que se defina un constuctor por defecto
 
-    virtual void mostrarReglas();
+    virtual void mostrarReglas()override;
 };
 
 
