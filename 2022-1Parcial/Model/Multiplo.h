@@ -15,7 +15,7 @@ protected:
 public:
     ~Multiplo() override = default;
     float jugar(float gonzosApostar) override;
-    virtual void mostrarReglas();
+    virtual void mostrarReglas()override;
 };
 
 
